@@ -7,6 +7,7 @@
 | Server | 麦当劳中国官方 MCP：`https://mcp.mcd.cn`（Streamable HTTP，JSON-RPC `tools/call`） |
 | 鉴权 | `Authorization: Bearer <MCD_MCP_TOKEN>`，Token 仅保存在服务端 `.env` / 环境变量 |
 | 文档 | https://open.mcd.cn/mcp/doc |
+| 配置示例 | [`mcp-config.example.json`](mcp-config.example.json)（只含环境变量占位符） |
 | 调用方 | 网页端：`server.js` 只读代理；Skill：`skill/mcd-macro/scripts/macro.mjs` |
 
 ## 二、实际调用的 Tool

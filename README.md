@@ -66,6 +66,8 @@ npm start                 # → http://localhost:8787
 | `HOST` | `0.0.0.0` | 监听地址，放在反向代理后可设为 `127.0.0.1` |
 | `PUBLIC_MODE` | `0` | 设为 `1` 时关闭券包相关接口（Token 绑定的是申请者自己的麦当劳账号，公开部署时可按需关闭） |
 
+在 Claude Code 等 MCP 客户端中直接接入麦当劳 MCP 时，可参考脱敏配置 [`mcp-config.example.json`](mcp-config.example.json)（Token 只用环境变量 `${MCD_MCP_TOKEN}` 占位）。
+
 服务器部署（可选）：[`deploy/deploy.sh`](deploy/deploy.sh) 通过环境变量指定目标主机，一键配置 systemd + nginx + HTTPS：
 
 ```bash
