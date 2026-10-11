@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#FFF7E8">
+<meta name="description" content="麦克罗 MAC·RO —— 麦当劳热量透视镜：看清每一口的热量和钠，帮你挑一顿吃得饱、不超标的。">
+<title>麦克罗 MAC·RO</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 120 132'%3E%3Cg stroke='%232B2118' stroke-width='5' stroke-linejoin='round'%3E%3Crect x='30' y='16' width='14' height='56' rx='5' fill='%23FFD23F'/%3E%3Crect x='53' y='6' width='14' height='64' rx='5' fill='%23FFD23F'/%3E%3Crect x='76' y='16' width='14' height='56' rx='5' fill='%23FFD23F'/%3E%3Cpath d='M17 56 Q60 68 103 56 L92 122 Q60 131 28 122 Z' fill='%23EE4B3B'/%3E%3C/g%3E%3Ccircle cx='47' cy='91' r='7' fill='%232B2118'/%3E%3Ccircle cx='73' cy='91' r='7' fill='%232B2118'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="app">
+  <header class="topbar">
+    <a class="brand" href="#profile" aria-label="麦克罗首页">
+      <span class="brand-mark" id="brandMark"></span>
+      <span class="brand-name">麦克罗<b>MAC·RO</b></span>
+    </a>
+    <nav class="tabs" id="tabs" aria-label="主导航">
+      <a href="#profile" data-view="profile"><i>🪪</i>我的档案</a>
+      <a href="#insights" data-view="insights"><i>🔍</i>热量小贴士</a>
+      <a href="#solver" data-view="solver"><i>✨</i>智能配餐</a>
+      <a href="#builder" data-view="builder"><i>🍔</i>自由组餐</a>
+      <a href="#gacha" data-view="gacha"><i>🎰</i>今天吃啥</a>
+    </nav>
+    <div class="status" id="dataStatus" title="数据来源"><span class="dot"></span><span class="txt">加载中</span></div>
+  </header>
+
+
+  <main id="main">
+    <section class="view" id="view-profile"></section>
+    <section class="view" id="view-solver"></section>
+    <section class="view" id="view-builder"></section>
+    <section class="view" id="view-insights"></section>
+    <section class="view" id="view-store"></section>
+    <section class="view" id="view-gacha"></section>
+  </main>
+
+  <footer class="foot">
+    <p>营养数据来自 <b>麦当劳中国 MCP</b> <code>list-nutrition-foods</code>，价格为多家门店菜单汇总的参考价，实际以门店为准；离线时使用内置快照。热量与宏量为每份标准值，实际制作存在差异。本工具为饮食规划参考，不构成医疗建议。</p>
+  </footer>
+</div>
+
+<nav class="bottomnav" id="bottomnav" aria-label="移动端导航">
+  <a href="#profile" data-view="profile"><span>🪪</span>档案</a>
+  <a href="#insights" data-view="insights"><span>🔍</span>小贴士</a>
+  <a href="#solver" data-view="solver"><span>✨</span>配餐</a>
+  <a href="#builder" data-view="builder"><span>🍔</span>组餐</a>
+  <a href="#gacha" data-view="gacha"><span>🎰</span>吃啥</a>
+</nav>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<div class="modal" id="modal" hidden><div class="modal-card" role="dialog" aria-modal="true"><button class="modal-x" data-close aria-label="关闭">×</button><div id="modalBody"></div></div></div>
+
+<script src="data/foods.snapshot.js"></script>
+<script src="data/menu.default.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

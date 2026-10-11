@@ -1,0 +1,14 @@
+{
+  "name": "mcd-macro",
+  "version": "1.0.0",
+  "private": true,
+  "description": "麦克罗 MAC·RO —— 麦当劳热量透视镜：按身体数据推荐这一餐的套餐（麦当劳 MCP 驱动），含网页端与 Agent Skill",
+  "scripts": {
+    "start": "node server.js",
+    "build:skill": "mkdir -p skill/mcd-macro/assets && cp public/app.js public/data/foods.snapshot.js public/data/menu.default.js skill/mcd-macro/assets/",
+    "skill": "node skill/mcd-macro/scripts/macro.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}

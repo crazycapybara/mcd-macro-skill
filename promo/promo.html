@@ -1,0 +1,309 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>麦克罗 宣传片</title>
+<style>
+  :root { --ink: #2B2118; --y: #FFD23F; --red: #EE4B3B; --cream: #FFF7E8; --mint: #B8F0CF; --p: #FF6B6B; --sky: #4DABF7;
+    --num: "Arial Rounded MT Bold", "SF Pro Rounded", "PingFang SC", sans-serif; --sans: "PingFang SC", -apple-system, sans-serif; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { width: 1080px; height: 1920px; overflow: hidden; background: var(--cream); }
+  body { font-family: var(--sans); color: var(--ink); -webkit-font-smoothing: antialiased; }
+  #stage { position: relative; width: 1080px; height: 1920px; overflow: hidden; background-color: var(--cream);
+    background-image: radial-gradient(#F0DCB6 4px, transparent 4px); background-size: 54px 54px; }
+  .abs { position: absolute; will-change: transform, opacity; }
+  .scene { position: absolute; inset: 0; opacity: 0; }
+  .center { left: 50%; top: 0; }
+  .big { font: 900 112px/1.15 var(--num); letter-spacing: 2px; text-align: center; white-space: nowrap; }
+  .hl { color: var(--red); background: linear-gradient(transparent 60%, var(--y) 60%, var(--y) 92%, transparent 92%); padding: 0 10px; border-radius: 10px; }
+  .sticker { background: #fff; border: 7px solid var(--ink); border-radius: 44px; box-shadow: 0 12px 0 var(--ink); padding: 22px 38px; font: 900 56px/1.2 var(--num); white-space: nowrap; }
+  .bubble::after { content: ""; position: absolute; left: 70px; bottom: -34px; width: 44px; height: 44px; background: #fff; border-right: 7px solid var(--ink); border-bottom: 7px solid var(--ink); transform: rotate(45deg); }
+  .card { background: #fff; border: 7px solid var(--ink); border-radius: 48px; box-shadow: 0 14px 0 var(--ink); }
+  .prod { width: 100%; height: 100%; object-fit: contain; }
+  .pill { display: inline-block; font: 900 46px var(--num); padding: 8px 26px; border-radius: 99px; border: 6px solid var(--ink); background: var(--y); white-space: nowrap; }
+  .stamp { font: 900 150px var(--num); color: var(--red); border: 14px solid var(--red); border-radius: 40px; padding: 0 30px; background: rgba(255,255,255,.85); white-space: nowrap; }
+  #subs { position: absolute; left: 50%; top: 1660px; transform: translateX(-50%); max-width: 1000px; text-align: center;
+    font: 900 50px/1.35 var(--sans); background: var(--ink); color: #fff; padding: 18px 44px; border-radius: 48px; box-shadow: 0 10px 0 var(--red); width: max-content; max-width: 960px; white-space: normal; }
+  #bar { position: absolute; left: 60px; right: 60px; top: 60px; display: flex; gap: 12px; }
+  #bar i { flex: 1; height: 14px; border-radius: 99px; background: rgba(43,33,24,.15); overflow: hidden; }
+  #bar i b { display: block; height: 100%; width: 0; background: var(--ink); border-radius: 99px; }
+  .reel { width: 270px; height: 330px; background: #fff; border: 8px solid var(--ink); border-radius: 36px; overflow: hidden; display: grid; place-items: center; box-shadow: inset 0 18px 20px rgba(0,0,0,.12); }
+  .reel img { width: 220px; height: 220px; object-fit: contain; }
+  .phone { width: 640px; height: 1386px; border: 14px solid var(--ink); border-radius: 86px; overflow: hidden; background: #fff; box-shadow: 0 22px 0 var(--ink); }
+  .phone img { width: 100%; display: block; }
+  .particle { position: absolute; border-radius: 6px; }
+</style>
+</head>
+<body>
+<div id="stage">
+  <div id="bar"></div>
+
+  <!-- S1 你以为…… -->
+  <div class="scene" id="s1">
+    <div class="abs big" id="s1t" style="left:540px;top:250px">你以为……</div>
+    <div class="abs" id="s1pie" style="left:240px;top:560px;width:600px;height:600px"><img class="prod" src="build/img/pie.png"></div>
+    <div class="abs sticker bubble" id="s1b" style="left:330px;top:1180px">只是饭后一口？🤏</div>
+    <div class="abs mascot" id="s1m" style="left:790px;top:1360px;width:250px"></div>
+    <div class="abs" id="s1q" style="left:900px;top:1250px;font:900 120px var(--num);color:var(--red)">?</div>
+  </div>
+
+  <!-- S2 221 kcal ≈ 1.3 碗米饭 -->
+  <div class="scene" id="s2">
+    <div class="abs" id="s2pie" style="left:90px;top:200px;width:300px;height:300px"><img class="prod" src="build/img/pie.png"></div>
+    <div class="abs" id="s2name" style="left:400px;top:300px;font:900 74px var(--num)">一个菠萝派</div>
+    <div class="abs" id="s2num" style="left:540px;top:520px;font:900 300px/1 var(--num);color:var(--red);text-align:center;white-space:nowrap"><span id="s2n">0</span><small style="font-size:90px;color:var(--ink);margin-left:12px">kcal</small></div>
+    <div class="abs" id="s2eq" style="left:540px;top:880px;font:900 90px var(--num);text-align:center">≈</div>
+    <div class="abs" id="s2r1" style="left:250px;top:1000px;font-size:260px;line-height:1">🍚</div>
+    <div class="abs" id="s2r2" style="left:560px;top:1000px;font-size:260px;line-height:1;clip-path:inset(0 70% 0 0)">🍚</div>
+    <div class="abs pill" id="s2lbl" style="left:540px;top:1310px;font-size:62px">1.3 碗米饭</div>
+    <div class="abs sticker" id="s2steps" style="left:540px;top:1440px;font-size:52px">🚶 要走 5,500 步才消耗掉</div>
+    <div class="abs mascot" id="s2m" style="left:-30px;top:1150px;width:230px"></div>
+    <div class="abs" id="s2sweat" style="left:150px;top:1140px;font-size:80px">💦</div>
+  </div>
+
+  <!-- S3 粥的钠 -->
+  <div class="scene" id="s3">
+    <div class="abs sticker bubble" id="s3t" style="left:540px;top:180px;font-size:68px">喝碗粥最清淡？🥣</div>
+    <div class="abs card" id="s3a" style="left:70px;top:470px;width:450px;height:640px;padding:30px;text-align:center">
+      <div style="height:300px"><img class="prod" src="build/img/congee.png"></div>
+      <div style="font:900 52px var(--num);margin-top:10px">鸡肉粥</div>
+      <div style="font:900 42px var(--num);color:#8A7A66">只有 133 kcal</div>
+      <div style="margin-top:22px;height:40px;border:6px solid var(--ink);border-radius:30px;background:#FFF4DC;overflow:hidden"><i id="s3ba" style="display:block;height:100%;width:0;background:linear-gradient(90deg,#9ad0ff,#1C82D4)"></i></div>
+      <div style="font:900 66px var(--num);margin-top:12px;color:#1C82D4">钠 <span id="s3na">0</span>mg</div>
+    </div>
+    <div class="abs card" id="s3b" style="left:560px;top:470px;width:450px;height:640px;padding:30px;text-align:center">
+      <div style="height:300px"><img class="prod" src="build/img/nugget.png"></div>
+      <div style="font:900 52px var(--num);margin-top:10px">麦乐鸡 5 块</div>
+      <div style="font:900 42px var(--num);color:#8A7A66">213 kcal</div>
+      <div style="margin-top:22px;height:40px;border:6px solid var(--ink);border-radius:30px;background:#FFF4DC;overflow:hidden"><i id="s3bb" style="display:block;height:100%;width:0;background:linear-gradient(90deg,#9ad0ff,#1C82D4)"></i></div>
+      <div style="font:900 66px var(--num);margin-top:12px;color:#1C82D4">钠 <span id="s3nb">0</span>mg</div>
+    </div>
+    <div class="abs" id="s3salt" style="left:180px;top:300px;font-size:150px">🧂</div>
+    <div id="s3grains"></div>
+    <div class="abs stamp" id="s3stamp" style="left:540px;top:1180px">钠 +45%</div>
+    <div class="abs pill" id="s3note" style="left:540px;top:1430px;background:#fff">≈ 1.6g 盐 · 全天建议的 31%</div>
+  </div>
+
+  <!-- S4 品牌 -->
+  <div class="scene" id="s4">
+    <div class="abs" id="s4bg" style="inset:0;background:var(--red)"></div>
+    <div class="abs" id="s4rays" style="left:-460px;top:-100px;width:2000px;height:2000px;border-radius:50%;background:repeating-conic-gradient(rgba(255,210,63,.35) 0 10deg, transparent 10deg 20deg)"></div>
+    <div class="abs mascot" id="s4m" style="left:240px;top:430px;width:600px"></div>
+    <div class="abs" id="s4logo" style="left:540px;top:1130px;text-align:center;white-space:nowrap">
+      <span style="font:900 210px var(--num);color:#fff;-webkit-text-stroke:10px var(--ink);paint-order:stroke fill;text-shadow:0 14px 0 var(--ink)">麦克罗</span>
+    </div>
+    <div class="abs pill" id="s4mac" style="left:540px;top:1400px;font-size:64px;color:var(--red)">MAC·RO</div>
+    <div class="abs" id="s4sub" style="left:540px;top:1530px;font:900 72px var(--num);color:#fff;white-space:nowrap;text-shadow:0 6px 0 var(--ink)">麦当劳热量透视镜 🔍</div>
+    <div id="s4conf"></div>
+  </div>
+
+  <!-- S5 智能配餐 -->
+  <div class="scene" id="s5">
+    <div class="abs big" id="s5t" style="left:540px;top:120px;font-size:96px">选个场景，<span class="hl">一键配好</span></div>
+    <div class="abs phone" id="s5phone" style="left:220px;top:300px"><img id="s5img" src="build/img/screen-solver.png"></div>
+    <div class="abs sticker" id="s5a" style="left:30px;top:640px;font-size:48px;background:var(--mint)">✅ 蛋白质达标</div>
+    <div class="abs sticker" id="s5b" style="left:660px;top:880px;font-size:54px;background:var(--y)">💰 ¥14.9</div>
+    <div class="abs sticker" id="s5c" style="left:30px;top:1180px;font-size:48px">🥗 热量没超</div>
+    <div class="abs" id="s5tap" style="left:520px;top:1020px;width:120px;height:120px;border-radius:50%;border:10px solid var(--red)"></div>
+    <div class="abs mascot" id="s5m" style="left:820px;top:1400px;width:230px"></div>
+  </div>
+
+  <!-- S6 扭蛋机 -->
+  <div class="scene" id="s6">
+    <div class="abs big" id="s6t" style="left:540px;top:150px;font-size:104px">不知道吃啥？🤔</div>
+    <div class="abs" id="s6m" style="left:90px;top:420px;width:900px;height:900px">
+      <div style="position:absolute;inset:0;background:var(--red);border:10px solid var(--ink);border-radius:80px;box-shadow:0 20px 0 var(--ink)"></div>
+      <div style="position:absolute;left:0;right:0;top:40px;text-align:center;font:900 70px var(--num);color:#fff;letter-spacing:6px;text-shadow:0 6px 0 rgba(0,0,0,.25)">🍟 麦小薯扭蛋机 🍟</div>
+      <div style="position:absolute;left:40px;right:40px;top:190px;display:flex;justify-content:space-between">
+        <div class="reel" id="r1"><img></div><div class="reel" id="r2"><img></div><div class="reel" id="r3"><img></div>
+      </div>
+      <div style="position:absolute;left:0;right:0;top:560px;display:flex;justify-content:space-around;font:900 46px var(--num);color:#fff"><span>主食</span><span>小食</span><span>饮品</span></div>
+      <div style="position:absolute;left:250px;width:400px;top:680px;height:140px;border-radius:40px;background:var(--y);border:8px solid var(--ink);box-shadow:0 10px 0 var(--ink);display:grid;place-items:center;font:900 64px var(--num)">🎰 拉一下！</div>
+    </div>
+    <div class="abs" id="s6lever" style="left:980px;top:520px;width:40px;height:300px;transform-origin:50% 100%">
+      <div style="position:absolute;left:8px;top:40px;width:24px;height:260px;background:#8A7A66;border:6px solid var(--ink);border-radius:12px"></div>
+      <div style="position:absolute;left:-22px;top:-20px;width:84px;height:84px;border-radius:50%;background:var(--y);border:8px solid var(--ink)"></div>
+    </div>
+    <div class="abs sticker" id="s6v" style="left:540px;top:1380px;font-size:56px;background:var(--mint)">😇 刚刚好！这顿可以安心吃</div>
+    <div id="s6stars"></div>
+  </div>
+
+  <!-- S7 结尾 -->
+  <div class="scene" id="s7">
+    <div class="abs mascot" id="s7m" style="left:290px;top:300px;width:500px"></div>
+    <div class="abs big" id="s7a" style="left:540px;top:950px;font-size:120px">麦克罗，</div>
+    <div class="abs big" id="s7b" style="left:540px;top:1115px;font-size:106px"><span class="hl">认真对待每一餐</span></div>
+    <div class="abs pill" id="s7brand" style="left:540px;top:1340px;font-size:60px">🍟 麦当劳热量透视镜</div>
+    <div class="abs" id="s7src" style="left:540px;top:1480px;font:800 38px var(--sans);color:#8A7A66;white-space:nowrap">营养数据来自麦当劳中国官方 MCP</div>
+    <div id="s7hearts"></div>
+  </div>
+
+  <div id="subs"></div>
+</div>
+
+<script>
+// ---------- 吉祥物麦小薯（可眨眼）----------
+const MASCOT = `<svg viewBox="0 0 120 132" style="width:100%;overflow:visible"><g stroke="#2B2118" stroke-width="3.5" stroke-linejoin="round"><rect x="30" y="16" width="13" height="56" rx="5" fill="#FFD23F" transform="rotate(-12 36 44)"/><rect x="46" y="6" width="13" height="64" rx="5" fill="#FFD23F"/><rect x="62" y="9" width="13" height="60" rx="5" fill="#FFD23F" transform="rotate(7 68 39)"/><rect x="77" y="20" width="13" height="52" rx="5" fill="#FFD23F" transform="rotate(16 83 46)"/><path d="M17 56 Q60 68 103 56 L92 122 Q60 131 28 122 Z" fill="#EE4B3B"/></g><g class="eyes" style="transform-origin:60px 91px"><circle cx="47" cy="91" r="5.5" fill="#2B2118"/><circle cx="73" cy="91" r="5.5" fill="#2B2118"/><circle cx="48.8" cy="89.2" r="1.9" fill="#fff"/><circle cx="74.8" cy="89.2" r="1.9" fill="#fff"/></g><ellipse cx="37" cy="101" rx="6.5" ry="3.8" fill="#FF9AA2"/><ellipse cx="83" cy="101" rx="6.5" ry="3.8" fill="#FF9AA2"/><path class="mouth" d="M54 100 Q60 107 66 100" fill="none" stroke="#2B2118" stroke-width="3" stroke-linecap="round"/></svg>`;
+document.querySelectorAll('.mascot').forEach(el => el.innerHTML = MASCOT);
+
+// ---------- 时间轴 ----------
+const SCENES = [['s1', 0, 3.4], ['s2', 3.4, 7.6], ['s3', 7.6, 12.5], ['s4', 12.5, 15.6], ['s5', 15.6, 20.4], ['s6', 20.4, 24.8], ['s7', 24.8, 30.2]];
+const SUBS = [[0.35, 2.9, '你以为，菠萝派只是饭后一口？'], [3.6, 6.8, '它有 221 大卡，差不多一碗多米饭！'], [7.9, 11.8, '喝碗粥最清淡？鸡肉粥的钠，比 5 块麦乐鸡还多！'],
+  [15.9, 19.3, '选个场景，一键配好健康又划算的一顿'], [20.7, 23.1, '不知道吃啥？扭蛋机帮你抽！']];
+const bar = document.getElementById('bar');
+bar.innerHTML = SCENES.map(() => '<i><b></b></i>').join('');
+
+// ---------- 工具 ----------
+const $ = id => document.getElementById(id);
+const cl = x => Math.max(0, Math.min(1, x));
+const P = (t, a, d) => cl((t - a) / d);
+const eo = x => 1 - Math.pow(1 - x, 3);
+const eb = x => { const c1 = 2.2, c3 = c1 + 1; return x <= 0 ? 0 : 1 + c3 * Math.pow(x - 1, 3) + c1 * Math.pow(x - 1, 2); };
+const el = x => x <= 0 ? 0 : x >= 1 ? 1 : Math.pow(2, -10 * x) * Math.sin((x * 10 - 0.75) * (2 * Math.PI) / 3) + 1;
+function tf(id, { x = 0, y = 0, s = 1, r = 0, o = 1, sx, sy, center = false } = {}) {
+  const e = typeof id === 'string' ? $(id) : id;
+  e.style.opacity = o;
+  e.style.transform = `${center ? 'translateX(-50%) ' : ''}translate(${x}px,${y}px) rotate(${r}deg) scale(${sx ?? s},${sy ?? s})`;
+}
+// 弹入：0→1 回弹缩放 + 渐显
+const popIn = (t, a, d = 0.45) => { const p = P(t, a, d); return { s: eb(p), o: cl(p * 3) }; };
+let seed = 7; const rnd = () => (seed = (seed * 16807) % 2147483647) / 2147483647;
+
+function blink(scope, t, period = 2.6, off = 0) {
+  scope.querySelectorAll('.eyes').forEach(e => { const ph = ((t + off) % period); e.style.transform = `scaleY(${ph < 0.12 ? 0.1 : 1})`; });
+}
+
+// 粒子（确定性）
+function particles(holder, n, gen) {
+  if (!holder.dataset.ready) { holder.innerHTML = Array.from({ length: n }, () => '<i class="particle"></i>').join(''); holder.dataset.ready = 1; seed = 11 + n; holder._p = Array.from({ length: n }, () => gen()); }
+  return [...holder.children].map((c, i) => [c, holder._p[i]]);
+}
+
+// ---------- 渲染 ----------
+const imgs = { m: ['m1', 'm2', 'm3', 'm4'], s: ['s1', 's2', 's3'], d: ['d1', 'd2', 'd3'] };
+window.render = function (t) {
+  // 场景显隐（交叉淡入淡出 0.22s）
+  for (const [id, a, b] of SCENES) {
+    const o = cl(Math.min((t - a) / 0.22 + 1, (b - t) / 0.22));
+    $(id).style.opacity = t >= a - 0.22 && t <= b + 0.22 ? (id === 's1' && t < 0.01 ? 1 : o) : 0;
+    $(id).style.visibility = t >= a - 0.25 && t <= b + 0.25 ? 'visible' : 'hidden';
+  }
+  [...bar.children].forEach((c, i) => { const [, a, b] = SCENES[i]; c.firstChild.style.width = P(t, a, b - a) * 100 + '%'; });
+  document.getElementById('stage').style.backgroundPosition = `${t * 18}px ${t * 30}px`;
+
+  // 字幕
+  const sub = SUBS.find(([a, b]) => t >= a && t <= b);
+  const sEl = $('subs');
+  if (sub) { const p = P(t, sub[0], 0.3); sEl.textContent = sub[2]; tf(sEl, { s: 0.85 + 0.15 * eb(p), o: Math.min(cl(p * 3), cl((sub[1] - t) / 0.2)), center: true }); }
+  else sEl.style.opacity = 0;
+
+  // S1
+  { const a = popIn(t, 0.15); tf('s1t', { ...a, center: true });
+    const p = P(t, 0.35, 0.6); tf('s1pie', { y: -600 * (1 - el(p)), r: (1 - eo(p)) * -25 + Math.sin(t * 3) * 3, o: cl(p * 4), s: 1 + Math.sin(t * 4) * 0.015 });
+    const b = popIn(t, 1.1); tf('s1b', { ...b });
+    const m = P(t, 1.5, 0.5); tf('s1m', { y: 300 * (1 - eb(m)), r: Math.sin(t * 5) * 8, o: cl(m * 3) });
+    const q = P(t, 2.0, 0.4); tf('s1q', { y: -20 * Math.sin(t * 6), s: eb(q), o: cl(q * 3), r: 12 });
+    blink($('s1'), t); }
+
+  // S2
+  { const l = t - 3.4;
+    tf('s2pie', { s: eb(P(l, 0, 0.45)), r: Math.sin(t * 3) * 6, o: cl(P(l, 0, 0.2)) });
+    tf('s2name', { x: 40 * (1 - eo(P(l, 0.1, 0.4))), o: P(l, 0.1, 0.3) });
+    const cnt = eo(P(l, 0.3, 1.0)); $('s2n').textContent = Math.round(221 * cnt);
+    tf('s2num', { s: 0.6 + 0.4 * eb(P(l, 0.25, 0.45)) + (cnt >= 1 ? Math.max(0, 0.06 - (l - 1.3) * 0.2) : 0), o: cl(P(l, 0.25, 0.2)), center: true });
+    tf('s2eq', { ...popIn(l, 1.3, 0.3), center: true });
+    tf('s2r1', { ...popIn(l, 1.45), r: Math.sin(t * 4) * 4 });
+    tf('s2r2', { ...popIn(l, 1.75), r: Math.sin(t * 4 + 1) * 4 });
+    tf('s2lbl', { ...popIn(l, 2.05), center: true });
+    tf('s2steps', { x: 600 * (1 - eb(P(l, 2.7, 0.5))), o: P(l, 2.7, 0.2), center: true });
+    tf('s2m', { y: 200 * (1 - eb(P(l, 0.6, 0.5))), r: -6 + Math.sin(t * 6) * 4, o: P(l, 0.6, 0.2) });
+    const sw = P(l, 2.4, 0.3); tf('s2sweat', { y: (l - 2.4) * 30 % 60, o: sw * (1 - P(l, 3.6, 0.3)), s: eb(sw) });
+    blink($('s2'), t, 2.2, 0.7); }
+
+  // S3
+  { const l = t - 7.6;
+    tf('s3t', { ...popIn(l, 0.15), center: true });
+    tf('s3a', { x: -600 * (1 - eb(P(l, 0.5, 0.55))), r: -2 });
+    tf('s3b', { x: 600 * (1 - eb(P(l, 0.7, 0.55))), r: 2 });
+    const g = eo(P(l, 1.4, 1.2));
+    $('s3ba').style.width = (g * 100) + '%'; $('s3bb').style.width = (g * 422 / 611 * 100) + '%';
+    $('s3na').textContent = Math.round(611 * g); $('s3nb').textContent = Math.round(422 * g);
+    const sh = P(l, 1.6, 0.3);
+    tf('s3salt', { s: eb(sh), o: sh * (1 - P(l, 3.4, 0.3)), r: 150 + Math.sin(l * 28) * 18 * (l > 1.9 && l < 3.3 ? 1 : 0), y: Math.sin(l * 28) * 10 });
+    for (const [c, q] of particles($('s3grains'), 26, () => ({ x: 230 + rnd() * 90, d: rnd() * 1.3, v: 380 + rnd() * 200, w: 14 + rnd() * 10 }))) {
+      const lt = l - 1.95 - q.d; const on = lt > 0 && lt < 0.9;
+      c.style.cssText = `position:absolute;border-radius:5px;left:${q.x + lt * 20}px;top:${430 + lt * q.v}px;width:${q.w}px;height:${q.w}px;background:#fff;border:4px solid #2B2118;opacity:${on ? 1 : 0}`;
+    }
+    const st = P(l, 3.0, 0.35);
+    tf('s3stamp', { s: 2.4 - 1.4 * eo(st), r: -12, o: cl(st * 3), center: true });
+    tf('s3note', { ...popIn(l, 3.5), center: true }); }
+
+  // S4
+  { const l = t - 12.5;
+    $('s4rays').style.transform = `rotate(${l * 25}deg) scale(${0.6 + 0.4 * eo(P(l, 0, 0.6))})`;
+    const j = P(l, 0.1, 0.6);
+    const sq = l > 0.55 && l < 0.85 ? Math.sin((l - 0.55) / 0.3 * Math.PI) * 0.12 : 0;
+    tf('s4m', { y: 900 * (1 - el(j)) + Math.sin(t * 4) * 12, sx: 1 + sq, sy: 1 - sq, r: Math.sin(t * 3) * 3, o: cl(j * 4) });
+    const lg = P(l, 0.8, 0.35); tf('s4logo', { s: 2.2 - 1.2 * eo(lg), o: cl(lg * 3), r: -3 * (1 - lg), center: true });
+    tf('s4mac', { ...popIn(l, 1.15), center: true, r: -4 });
+    tf('s4sub', { y: 40 * (1 - eo(P(l, 1.45, 0.4))), o: P(l, 1.45, 0.3), center: true });
+    const colors = ['#FFD23F', '#fff', '#B8F0CF', '#BFE3FF', '#FFB3C1', '#2B2118'];
+    for (const [c, q] of particles($('s4conf'), 60, () => ({ a: rnd() * Math.PI * 2, v: 900 + rnd() * 900, c: colors[Math.floor(rnd() * 6)], w: 18 + rnd() * 22, rs: rnd() * 900 }))) {
+      const lt = l - 0.55; const on = lt > 0;
+      const x = 540 + Math.cos(q.a) * q.v * lt, y = 700 + Math.sin(q.a) * q.v * lt + 1400 * lt * lt;
+      c.style.cssText = `position:absolute;left:${x}px;top:${y}px;width:${q.w}px;height:${q.w * 0.55}px;background:${q.c};border:3px solid #2B2118;border-radius:4px;transform:rotate(${q.rs * lt}deg);opacity:${on ? 1 : 0}`;
+    }
+    blink($('s4'), t, 1.8, 0.3); }
+
+  // S5
+  { const l = t - 15.6;
+    tf('s5t', { ...popIn(l, 0.1), center: true });
+    tf('s5phone', { y: 1400 * (1 - eb(P(l, 0.25, 0.7))), r: (1 - eo(P(l, 0.25, 0.9))) * 6 });
+    $('s5img').style.transform = `translateY(${-160 * eo(P(l, 1.6, 2.2))}px)`;
+    tf('s5a', { ...popIn(l, 1.0), r: -6 + Math.sin(t * 3) * 2 });
+    tf('s5b', { ...popIn(l, 1.6), r: 6 + Math.sin(t * 3 + 1) * 2 });
+    tf('s5c', { ...popIn(l, 2.2), r: -4 + Math.sin(t * 3 + 2) * 2 });
+    const tp = P(l, 2.8, 0.6); tf('s5tap', { s: 0.4 + tp * 1.2, o: tp > 0 && tp < 1 ? 1 - tp : 0 });
+    tf('s5m', { y: 300 * (1 - eb(P(l, 0.6, 0.5))), r: Math.sin(t * 5) * 7, o: P(l, 0.6, 0.2) });
+    blink($('s5'), t, 2.4, 1.1); }
+
+  // S6 扭蛋机
+  { const l = t - 20.4;
+    tf('s6t', { ...popIn(l, 0.1), center: true });
+    tf('s6m', { s: 0.85 + 0.15 * eb(P(l, 0.2, 0.5)), o: P(l, 0.2, 0.2) });
+    const lv = P(l, 0.5, 0.25), back = P(l, 0.8, 0.3);
+    $('s6lever').style.transform = `rotate(${lv * 40 - back * 40}deg)`; $('s6lever').style.opacity = P(l, 0.2, 0.2);
+    const finals = ['m1', 's1', 'd2'], keys = ['m', 's', 'd'], stops = [1.7, 2.1, 2.5];
+    keys.forEach((k, i) => {
+      const reel = $('r' + (i + 1)), img = reel.firstChild;
+      const spinning = l > 0.6 && l < stops[i];
+      const src = spinning ? imgs[k][Math.floor(l * 14 + i) % imgs[k].length] : finals[i];
+      const want = `build/img/${src}.png`;
+      if (!img.src.endsWith(want)) img.src = want;
+      img.style.filter = spinning ? 'blur(4px)' : 'none';
+      const sb = P(l, stops[i], 0.35);
+      img.style.transform = spinning ? `translateY(${(l * 900) % 60 - 30}px)` : `translateY(${-30 * (1 - eb(sb))}px)`;
+    });
+    tf('s6v', { ...popIn(l, 2.85), center: true });
+    for (const [c, q] of particles($('s6stars'), 14, () => ({ x: 120 + rnd() * 840, y: 400 + rnd() * 900, d: rnd() * 0.6, s: 50 + rnd() * 50 }))) {
+      const lt = l - 2.6 - q.d; const on = lt > 0 && lt < 1.6;
+      c.textContent = '✨'; c.style.cssText = `position:absolute;left:${q.x}px;top:${q.y - lt * 60}px;font-size:${q.s}px;opacity:${on ? 1 - lt / 1.6 : 0};transform:scale(${eb(cl(lt / 0.4))})`;
+    } }
+
+  // S7 结尾
+  { const l = t - 24.8;
+    tf('s7m', { y: 600 * (1 - el(P(l, 0.1, 0.8))) + Math.sin(t * 4) * 14, r: Math.sin(t * 6) * 9, o: P(l, 0.1, 0.2) });
+    tf('s7a', { ...popIn(l, 0.5), center: true });
+    tf('s7b', { ...popIn(l, 0.9, 0.5), center: true });
+    tf('s7brand', { ...popIn(l, 1.6), center: true });
+    tf('s7src', { o: P(l, 2.1, 0.4), y: 20 * (1 - eo(P(l, 2.1, 0.4))), center: true });
+    for (const [c, q] of particles($('s7hearts'), 16, () => ({ x: rnd() < 0.5 ? 10 + rnd() * 100 : 950 + rnd() * 50, d: rnd() * 3.2, s: 50 + rnd() * 40, e: ['💛', '🍟', '❤️', '✨'][Math.floor(rnd() * 4)] }))) {
+      const lt = l - 0.8 - q.d; const on = lt > 0 && lt < 2.6;
+      c.textContent = q.e; c.style.cssText = `position:absolute;left:${q.x + Math.sin(lt * 3) * 30}px;top:${1900 - lt * 520}px;font-size:${q.s}px;opacity:${on ? Math.min(1, (2.6 - lt)) : 0}`;
+    }
+    blink($('s7'), t, 2.0, 0.4); }
+};
+window.render(0);
+</script>
+</body>
+</html>

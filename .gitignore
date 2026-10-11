@@ -1,0 +1,8 @@
+.env
+.probe/
+.claude/
+.DS_Store
+node_modules/
+promo/build/
+# 根目录的宣传片草稿（成片在 media/）
+/*.mp4
